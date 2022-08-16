@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, StyleSheet, Text, TextInput, View, Image } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View, Image, ProgressBarAndroid } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -43,8 +43,9 @@ const styles = StyleSheet.create({
 
 function SplashScreen() {
   return (
-    <View>
-      <Text>Loading...</Text>
+    <View styles={styles.container}>
+      <ProgressBarAndroid />
+      <Text style={styles.paragraph}>Iniciando sessión ...</Text>
     </View>
   );
 }
